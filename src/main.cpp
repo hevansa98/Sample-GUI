@@ -15,9 +15,9 @@ int main(int argc, char *argv[])
     user1 = new human("John", "Smith", 21);
     user2 = new employee("Flight", "McGrinch", 59);
     /*
-        user1 -> dispInformation();
-        user2 -> dispInformation();
-        */
+    user1 -> dispInformation();
+    user2 -> dispInformation();
+    */
     writeOut.writeEmployee(user2);
     writeOut.writeHuman(user1);
 
@@ -37,7 +37,10 @@ int main(int argc, char *argv[])
         delete newHuman;
     }
 
-    delete user1, user2, newHuman, newEmployee;
+    delete user1;
+    delete user2;
+    delete newHuman;
+    delete newEmployee;
     QApplication a(argc, argv);
     MainWindow w;
     w.show();

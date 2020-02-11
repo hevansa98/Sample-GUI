@@ -5,7 +5,6 @@
 #include "../lib/fileio.h"
 
 fileio::fileio() : path(init_path()){
-    std::cout << path << std::endl;
     ofstream initFile;
     if(!std::experimental::filesystem::exists(path+"/Sample-GUI/data/human.txt")){
         initFile.open(path+"/Sample-GUI/data/human.txt", ios::out | ios::binary);
