@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include "../lib/employee.h"
 #include "../lib/fileio.h"
 
@@ -24,5 +25,18 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    bool fieldsFilled(int);
+    short age;
+    int empNum, userNum;
+
+    string FName, LName;
+
+    employee * empObj;
+    human * humanObj;
+
+    QMessageBox errorBox;
+
+    fileio * fileObj = new fileio();
 };
 #endif // MAINWINDOW_H

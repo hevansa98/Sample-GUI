@@ -20,7 +20,7 @@ protected:
     int id_type;                    //Defines object type (0: human, 1: employee)
 public:
     human(string, string, short, int = 0);      //FirstName, LastName, Age, UserType
-    human(string, string, short, int, int);     //Constructor for already exisitng user data (FName, LName, Age, ID, ID Type)
+    human(string, string, short, int, int); //Constructor for already exisitng user data (FName, LName, Age, ID, ID Type)
     string getFullName();                       //returns "first_name last_name"
     string getFirstName(int = 0);               //returns "first_name"
     string getLastName(int = 0);                //returns "last_name"

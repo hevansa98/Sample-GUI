@@ -62,7 +62,7 @@ int human::getId(){
 }
 
 int human::assignNewId(){
-    return (rand()%9998)+1;
+    return (rand()%8999)+1000;
 }
 
 void human::dispInformation(string _status){
