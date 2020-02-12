@@ -2,7 +2,7 @@
 Author: Harry E. Allen, IV 
 </br>Purpose: Code Sample Repository
 </br>MIT License
-</br>Core from https://github.com/hevansa98/Sample.git
+</br>Core repository https://github.com/hevansa98/Sample.git
 </br></br>
 
 # Function of Code
