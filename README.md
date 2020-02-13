@@ -14,6 +14,11 @@ This code is mean to mock a library database system with the two primary users b
 # Disclaimer
 This is meant as a code sample demonstrating the author's knowledge and capability in object-oriented programming. 
 </br>It is still under development and it therefore consistently updated.
+</br>Requires Qt library and standard and experimental C++ libraries
+</br>Made for linux systems as it is built on qmake and make (required packages)
+
+# Compile instructions
+bash compileAndRun.sh
 
 # TODO:
 Finish console output confirming user actions 
