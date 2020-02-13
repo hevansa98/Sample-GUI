@@ -9,7 +9,7 @@ Author: Harry E. Allen, IV
 This code is mean to mock a library database system with the two primary users being either employees or reagular users or "humans"
 </br>The 'databases' are two .txt files with user information
 </br>The employee is derived from the human and in the future the user class will be derived from the human class
-</br>GUI allowing for ease of use (unfinished but functional)
+</br>GUI allowing for ease of use
 
 # Disclaimer
 This is meant as a code sample demonstrating the author's knowledge and capability in object-oriented programming. 
