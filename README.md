@@ -18,7 +18,7 @@ This is meant as a code sample demonstrating the author's knowledge and capabili
 </br>Made for linux systems as it is built on qmake and make (required packages)
 
 # Compile instructions
-bash compileAndRun.sh
+bash buildCompile.sh
 
 # TODO:
 Finish console output confirming user actions 
