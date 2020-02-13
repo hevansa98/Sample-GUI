@@ -1,5 +1,4 @@
 cleanCommit.sh
-build/*
+build/
 Sample-GUI.pro.user
 .directory
-build/.*
