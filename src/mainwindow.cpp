@@ -49,8 +49,16 @@ bool MainWindow::fieldsFilled(int numFields){   //1: userID, 2: empID
     }
 }
 
+void MainWindow::on_actionExit_triggered(){
+    QCoreApplication::quit();
+}
+
+//errorBox.setText();
+//errorBox.exec();
+
 void MainWindow::on_CreateUserButton_clicked()
 {
+    ui->taskOutput->clear();
     if(fieldsFilled(3)){
         FName = ui->FNField->text().toStdString();
         LName = ui->LNField->text().toStdString();
@@ -67,22 +75,26 @@ void MainWindow::on_CreateUserButton_clicked()
             fileObj -> writeHuman(humanObj);
         }
     }else{
-        errorBox.setText("First Name, Last Name, and Age must be filled out.");
-        errorBox.exec();
+        ui->taskOutput->addItem("First Name, Last Name, and Age must be filled out.");
     }
 }
 
 void MainWindow::on_SearchUserButton_clicked()
 {
+    ui->taskOutput->clear();
     if(ui->EmpCheckBox->isChecked()){
         if(fieldsFilled(2)){
             empNum = ui->EmpNumField->text().toInt();
             empObj = fileObj -> getEmployee(empNum);
+        }else{
+            ui->taskOutput->addItem("Employee Number must be filled out.");
         }
     }else{
         if(fieldsFilled(1)){
             userNum = ui->UserNumField->text().toInt();
             humanObj = fileObj -> getHuman(userNum);
+        }else{
+            ui->taskOutput->addItem("User Number must be filled out.");
         }
     }
 }

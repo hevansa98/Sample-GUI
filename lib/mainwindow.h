@@ -19,8 +19,8 @@ public:
     ~MainWindow();
 
 private slots:
+    void on_actionExit_triggered();
     void on_CreateUserButton_clicked();
-
     void on_SearchUserButton_clicked();
 
 private:
