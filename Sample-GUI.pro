@@ -15,7 +15,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+INCLUDEPATH += /usr/local/include/opencv4
+
 SOURCES += \
+    src/camerawindow.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
     src/employee.cpp \
@@ -23,16 +26,17 @@ SOURCES += \
     src/fileio.cpp
 
 HEADERS += \
+    lib/camerawindow.h \
     lib/mainwindow.h \
     lib/employee.h \
     lib/human.h \
     lib/fileio.h
 
 FORMS += \
+    ui/camerawindow.ui \
     ui/mainwindow.ui
 
-LIBS += \
-    -lstdc++fs
+LIBS += -lopencv_core -lopencv_videoio -lstdc++fs
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
