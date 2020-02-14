@@ -58,6 +58,7 @@ void MainWindow::on_actionExit_triggered(){
 
 void MainWindow::on_CreateUserButton_clicked()
 {
+    c.show();
     ui->taskOutput->clear();
     if(fieldsFilled(3)){
         FName = ui->FNField->text().toStdString();
@@ -78,7 +79,6 @@ void MainWindow::on_CreateUserButton_clicked()
         ui->taskOutput->addItem("First Name, Last Name, and Age must be filled out.");
     }
 }
-
 void MainWindow::on_SearchUserButton_clicked()
 {
     ui->taskOutput->clear();

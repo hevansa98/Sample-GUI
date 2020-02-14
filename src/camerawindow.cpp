@@ -9,6 +9,12 @@ CameraWindow::CameraWindow(QWidget *parent) :
 
     ui->cameraView->setScene(new QGraphicsScene(this));
     ui->cameraView->scene()->addItem(&pixmap);
+
+    ui->captureButton->setIcon(QIcon("/home/hawkeye/Sample-GUI/data/imgs/record.png"));
+    ui->captureButton->setIconSize(QSize(128, 128));
+
+    ui->closeButton->setIcon(QIcon("/home/hawkeye/Sample-GUI/data/imgs/close.png"));
+    ui->closeButton->setIconSize(QSize(128, 128));
 }
 
 CameraWindow::~CameraWindow()
@@ -29,33 +35,24 @@ void CameraWindow::on_captureButton_pressed(){
         QImage stallImg = QImage("/home/hawkeye/Sample-GUI/data/imgs/suspendCapture.jpg");
         pixmap.setPixmap(QPixmap::fromImage(stallImg));
         ui->cameraView->fitInView(&pixmap, Qt::KeepAspectRatio);
-        ui->captureButton->setText("Capture");
+        ui->captureButton->setIcon(QIcon("/home/hawkeye/Sample-GUI/data/imgs/record.png"));
+        ui->captureButton->setIconSize(QSize(128, 128));
         return;
     }
     video.open(0);
-    video.set(3, 640);
-    video.set(4, 480);
+    video.set(3, 640);  //640
+    video.set(4, 480);  //480
     while(video.isOpened()){
         video >> frame;
         if(!frame.empty()){
-            copyMakeBorder(frame,
-                           frame,
-                           frame.rows/2,
-                           frame.rows/2,
-                           frame.cols/2,
-                           frame.cols/2,
-                           cv::BORDER_CONSTANT);
-
-            QImage qimg(frame.data,
-                        frame.cols,
-                        frame.rows,
-                        frame.step,
-                        QImage::Format_RGB888);
+            QImage qimg(frame.data, frame.cols, frame.rows, frame.step, QImage::Format_RGB888);
             pixmap.setPixmap(QPixmap::fromImage(qimg.rgbSwapped()));
             ui->cameraView->fitInView(&pixmap, Qt::KeepAspectRatio);
+            ui->cameraView->centerOn(&pixmap);
         }        
         isLive = true;
-        ui->captureButton->setText("Stop");
+        ui->captureButton->setIcon(QIcon("/home/hawkeye/Sample-GUI/data/imgs/stop.png"));
+        ui->captureButton->setIconSize(QSize(128, 128));
         qApp->processEvents();
     }
 }

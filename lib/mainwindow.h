@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include "../lib/employee.h"
 #include "../lib/fileio.h"
+#include "../lib/camerawindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -36,6 +37,8 @@ private:
     human * humanObj;
 
     QMessageBox errorBox;
+
+    CameraWindow c;
 
     fileio * fileObj = new fileio();
 };
