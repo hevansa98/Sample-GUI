@@ -250,6 +250,17 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>FNField</tabstop>
+  <tabstop>LNField</tabstop>
+  <tabstop>AgeField</tabstop>
+  <tabstop>EmpCheckBox</tabstop>
+  <tabstop>CreateUserButton</tabstop>
+  <tabstop>SearchUserButton</tabstop>
+  <tabstop>UserNumField</tabstop>
+  <tabstop>EmpNumField</tabstop>
+  <tabstop>taskOutput</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

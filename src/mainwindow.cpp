@@ -58,7 +58,6 @@ void MainWindow::on_actionExit_triggered(){
 
 void MainWindow::on_CreateUserButton_clicked()
 {
-    c.show();
     ui->taskOutput->clear();
     if(fieldsFilled(3)){
         FName = ui->FNField->text().toStdString();
@@ -70,10 +69,16 @@ void MainWindow::on_CreateUserButton_clicked()
             empObj = new employee(FName, LName, age);
             empObj -> dispInformation();
             fileObj -> writeEmployee(empObj);
+            c.show();
+            c.assignUser(empObj);
+            c.initCast();
         }else{
             humanObj = new human(FName, LName, age);
             humanObj -> dispInformation();
             fileObj -> writeHuman(humanObj);
+            c.show();
+            c.assignUser(humanObj);
+            c.initCast();
         }
     }else{
         ui->taskOutput->addItem("First Name, Last Name, and Age must be filled out.");

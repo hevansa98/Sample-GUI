@@ -36,7 +36,7 @@ FORMS += \
     ui/camerawindow.ui \
     ui/mainwindow.ui
 
-LIBS += -lopencv_core -lopencv_videoio -lstdc++fs
+LIBS += -lopencv_core -lopencv_videoio -lopencv_imgproc -lopencv_imgcodecs -lstdc++fs
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

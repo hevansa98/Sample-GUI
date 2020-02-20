@@ -2,3 +2,4 @@ cleanCommit.sh
 build/
 Sample-GUI.pro.user
 .directory
+data/profile/*_PROFILE.*

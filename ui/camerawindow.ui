@@ -36,6 +36,39 @@
         </property>
        </spacer>
       </item>
+      <item row="2" column="5">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="6">
+       <widget class="QPushButton" name="closeButton">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../data/imgs/stop.png</normaloff>../data/imgs/stop.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>128</width>
+          <height>128</height>
+         </size>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
       <item row="2" column="2">
        <widget class="QPushButton" name="captureButton">
         <property name="autoFillBackground">
@@ -62,27 +95,20 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="3">
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
       <item row="2" column="4">
-       <widget class="QPushButton" name="closeButton">
+       <widget class="QPushButton" name="saveButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string/>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../data/imgs/stop.png</normaloff>../data/imgs/stop.png</iconset>
+          <normaloff>../data/imgs/save.png</normaloff>../data/imgs/save.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -90,12 +116,9 @@
           <height>128</height>
          </size>
         </property>
-        <property name="default">
-         <bool>false</bool>
-        </property>
        </widget>
       </item>
-      <item row="2" column="5">
+      <item row="2" column="7">
        <spacer name="horizontalSpacer_3">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -108,7 +131,7 @@
         </property>
        </spacer>
       </item>
-      <item row="0" column="0" colspan="6">
+      <item row="0" column="0" colspan="8">
        <widget class="QGraphicsView" name="cameraView">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -117,6 +140,19 @@
          </sizepolicy>
         </property>
        </widget>
+      </item>
+      <item row="2" column="3">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </item>
